@@ -4,16 +4,12 @@
 require('offline-plugin/runtime').install();
 import React from 'react';
 import ReactDOM from 'react-dom';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, useRouterHistory } from 'react-router';
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import { createHashHistory } from 'history';
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
-
-// Adding injectTapEventPlugin for MUI
-injectTapEventPlugin();
 
 /**
  * Internal resources
