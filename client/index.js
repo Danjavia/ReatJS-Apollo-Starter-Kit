@@ -4,11 +4,16 @@
 require('offline-plugin/runtime').install();
 import React from 'react';
 import ReactDOM from 'react-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, useRouterHistory } from 'react-router';
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import { createHashHistory } from 'history';
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+
+// Adding injectTapEventPlugin for MUI
+injectTapEventPlugin();
 
 /**
  * Internal resources
@@ -19,19 +24,7 @@ import './assets/scss/style.scss';
 const rootNode = document.createElement('div');
 document.body.appendChild(rootNode);
 
-const GRAPHQL_ENDPOINT = process.env.CONFIG ? process.env.CONFIG.GRAPHQL_ENDPOINT || 'http://192.168.101.14:8000/api/khronos/' : 'http://192.168.101.14:8000/api/khronos/';
-
-// let token = localStorage.getItem('jwt_token');
-
-// Relay.injectNetworkLayer(
-//   new Relay.DefaultNetworkLayer(GRAPHQL_ENDPOINT, {
-//     fetchTimeout: 30000,   // Timeout after 30s.
-//     retryDelays: [5000],   // Only retry once after a 5s delay.
-//     // headers: {
-//     //   Authorization: token ? 'JWT ' + token : ''
-//     // }
-//   })
-// );
+const GRAPHQL_ENDPOINT = process.env.CONFIG.GRAPHQL_ENDPOINT;
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({ uri: GRAPHQL_ENDPOINT }),
@@ -39,7 +32,9 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Router history={appHistory} routes={Route} />
+    <MuiThemeProvider>
+      <Router history={appHistory} routes={Route} />
+    </MuiThemeProvider>
   </ApolloProvider>,
   rootNode
 );
