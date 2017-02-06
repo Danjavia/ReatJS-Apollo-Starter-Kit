@@ -14,7 +14,12 @@ npm install
 ./node_modules/protractor/bin/webdriver-manager update // Download the Selenium driver
 ```
 
-## Basic commands
+# Set GraphQL Hub Endpoint
+
+- Rename **./client/config/config.dev.json.example** removing the *example* extension.
+- Set **GRAPHQL_ENDPOINT** const to your GraphQL Endpoint.
+
+# Basic commands
 
 ```js
 npm start // Start the application in dev mode. Open in http://localhost:3000
@@ -23,7 +28,7 @@ npm run test // Run respective Unit tests from app
 npm run deploy // Run the unit tests and e2e test, after it build the bundle. Show in http://localhost:8000
 ```
 
-## Enable Automated Documentation
+# Enable Automated Documentation
 
 For enabling automated documentation, please install esdoc via npm
 
@@ -34,7 +39,7 @@ It, enables the documentation generation running the stage or deploy commands.
 
 For showing how to create a documentation for components or classes, please check the docs [Here.](https://esdoc.org/) 
 
-## Running the Project
+# Running the Project
 
 Finally, run the project again
 
