@@ -1,0 +1,103 @@
+@import "./vars.scss";
+
+.ant-btn {
+  border-radius: 3px!important;
+
+  &.ant-btn-warning {
+    background: $orange;
+    color: white;
+    border-color: darken($orange, 5%);
+
+    &:hover,
+    &:visited,
+    &:focus {
+      background: lighten($orange, 10%);
+      color: white;
+      border-color: $orange;
+    }
+  }
+
+  &.ant-btn-success {
+    background: $green;
+    color: white;
+    border-color: darken($green, 5%);
+
+    &:hover,
+    &:visited,
+    &:focus {
+      background: lighten($green, 10%);
+      color: white;
+      border-color: $green;
+    }
+  }
+
+  &.ant-btn-danger {
+    background: $google;
+    color: white;
+    border-color: darken($google, 5%);
+
+    &:hover,
+    &:visited,
+    &:focus {
+      background: lighten($google, 10%);
+      color: white;
+      border-color: $google;
+    }
+  }
+
+  &.ant-btn-danger-md {
+    background: $danger;
+    color: white;
+    border-color: darken($danger, 5%);
+
+    &:hover,
+    &:visited,
+    &:focus {
+      background: lighten($danger, 10%);
+      color: white;
+      border-color: $danger;
+    }
+  }
+
+  &.ant-btn-success-md {
+    background: $sucessful;
+    color: white;
+    border-color: darken($sucessful, 5%);
+
+    &:hover,
+    &:visited,
+    &:focus {
+      background: lighten($sucessful, 10%);
+      color: white;
+      border-color: $sucessful;
+    }
+  }
+
+  &.ant-btn-info-md {
+    background: $info;
+    color: white;
+    border-color: darken($info, 5%);
+
+    &:hover,
+    &:visited,
+    &:focus {
+      background: lighten($info, 10%);
+      color: white;
+      border-color: $info;
+    }
+  }
+
+  &.ant-btn-warning-md {
+    background: $warning;
+    color: white;
+    border-color: darken($warning, 5%);
+
+    &:hover,
+    &:visited,
+    &:focus {
+      background: lighten($warning, 10%);
+      color: white;
+      border-color: $warning;
+    }
+  }
+}

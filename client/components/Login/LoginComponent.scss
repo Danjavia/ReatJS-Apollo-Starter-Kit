@@ -1,0 +1,166 @@
+@import '../../assets/scss/modules/vars.scss';
+@import '../../assets/scss/mixins/colors.scss';
+
+
+/*Copmponent design*/
+.login-form {
+
+  input,
+  button {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .login-form__button {
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #eb6624;
+    //@include background-color($orange, white);
+
+    &--login {
+      margin-top: 30px;
+    }
+  }
+
+  h2 {
+    margin-top: 30px;
+    position: relative;
+
+    &::before{
+      position: absolute;
+      margin-left: calc( -50% / 2);
+      width: 50%;
+      top: -15px;
+      left: 50%;
+      content: '';
+      border-top: 1px solid #e9e9e9;
+    }
+  }
+
+  .login-form__social {
+    margin-bottom: 10px;
+    padding: 0 ;
+    font-size: 15px;
+    text-align: left;
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+
+    i {
+      font-size: 18px;
+      display: inline-block;
+      padding: 5px 0;
+      background-color: rgba(0,0,0,0.15);
+      width: 30%;
+      text-align: center;
+    }
+
+    .fa-facebook {
+      padding: 5px 0;
+    }
+
+    .fa-twitter{
+      padding: 5px 0;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: text-bottom;
+      width: 70%;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    &--facebook {
+
+      border: 1px solid $facebook;
+      @include background-color($facebook, white);
+
+      &:hover,
+      &:visited,
+      &:active,
+      &:focus {
+        @include background-color(darken($facebook, 10%), white);
+      }
+    }
+
+    &--google {
+      border: 1px solid $google;
+      @include background-color($google, white);
+
+      &:hover,
+      &:visited,
+      &:active,
+      &:focus {
+        @include background-color( darken($google, 10%), white);
+      }
+    }
+
+    &--twitter {
+      border: 1px solid $twitter;
+      @include background-color($twitter, white);
+
+      &:hover,
+      &:visited,
+      &:active,
+      &:focus {
+        @include background-color(darken($twitter, 10%), white);
+      }
+    }
+  }
+}
+
+
+/*ant design default styles provider*/
+.ant-row {
+  &.ant-form-item{
+    margin-bottom: 4px;
+  }
+}
+.ant-pwd-strength {
+  display: inline-block;
+  margin-left: 8px;
+  line-height: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.ant-pwd-strength-item {
+  float: left;
+  margin-right: 1px;
+  margin-top: 12px;
+  width: 19px;
+  height: 8px;
+  line-height: 8px;
+  list-style: none;
+  background-color: #f3f3f3;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ant-pwd-strength-item-1 {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.ant-pwd-strength-item-2 {
+  width: 20px;
+}
+
+.ant-pwd-strength-item-3 {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-right: 8px;
+}
+
+.ant-pwd-strength-low .ant-pwd-strength-item-1, .ant-pwd-strength-medium .ant-pwd-strength-item-1, .ant-pwd-strength-high .ant-pwd-strength-item-1 {
+  background-color: #FAC450;
+}
+
+.ant-pwd-strength-medium .ant-pwd-strength-item-2, .ant-pwd-strength-high .ant-pwd-strength-item-2 {
+  background-color: rgba(135, 208, 104, .6);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9987D068,endColorstr=#9987D068);
+}
+
+.ant-pwd-strength-high .ant-pwd-strength-item-3 {
+  background-color: #87D068;
+}

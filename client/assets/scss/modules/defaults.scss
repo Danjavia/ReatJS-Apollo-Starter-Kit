@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font: 400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #444;
+}
+body,html{
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.ant-form-item {
+  margin-bottom: 10px!important;
+
+  &-label {
+    padding-bottom: 5px!important;
+  }
+}
+
+label {
+  font-size: 1.1em!important;
+}

@@ -1,0 +1,4 @@
+@mixin background-color ($background: red, $font: white) {
+  color: $font;
+  background-color:$background;
+}
