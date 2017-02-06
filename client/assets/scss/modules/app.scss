@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: 'Lato', sans-serif;
+    margin: 0.2em;
+  }
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  margin: 10px 50px;
+}

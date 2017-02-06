@@ -5,11 +5,9 @@ import HomePage from './HomePage';
 
 // Initialize GraphQL queries or mutations with the `gql` tag
 const oppsData = gql`
-  query OpportunityQuery($id: ID!) {
-    opportunity(id: $id) {
+  query UserQuery($id: ID!) {
+    user(id: $id) {
       id
-      insuranceType
-      currentStep
     }
   }
 `;
