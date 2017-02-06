@@ -2,7 +2,7 @@
 For starting repo, follow these steps.
 
 # Requirements
-Install Node v7.5.0 via nvm
+Install Node v6.3.0+
 
 ## Install Java JDK
 [Download Java JDK Here.](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
