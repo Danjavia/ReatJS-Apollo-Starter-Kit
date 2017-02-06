@@ -16,6 +16,8 @@ npm install
 
 # Set GraphQL Hub Endpoint
 
+You can use https://graph.cool for setting GraphQL as a service for your project.
+
 - Rename **./client/config/config.dev.json.example** removing the *example* extension.
 - Set **GRAPHQL_ENDPOINT** const to your GraphQL Endpoint.
 
